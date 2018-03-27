@@ -1,0 +1,134 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/styles.css">
+    <body>
+    <div class="background-blue-gradient relative">
+
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="opener-box">
+            <div class="overlay-white"></div>
+            <div class="row">
+              <div class="large-9 columns margin-vertical-large">
+
+                <h1 class="green">Designer of Products</h1>
+                <p>I am Makhloufi Smail<br/> <br/>These are some of the applications that I have accomplished,<br/> through the initiative of one million Arab programmers.</p>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="caption-container">
+        <p>Application to the Global Web Development Workshop</p>
+    </div>
+    <div class="row margin-top" align="center">
+        <div class="large-10 large-centered columns">
+            <div class="regular slider">
+                <div>
+                    <div class="browser box-shadow"><img src="images/forum.png" ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="caption-container">
+        <p>Website of the Global Web Development Workshop</p>
+    </div>
+    <div class="row margin-top">
+        <div class="large-10 large-centered columns">
+            <div class="regular slider">
+                <div>
+                    <div class="browser box-shadow"><img src="images/web-dev.png"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="caption-container">
+        <p>Example of dealing with graphical interfaces</p>
+    </div>
+    <div class="row margin-top">
+        <div class="large-10 large-centered columns">
+            <div class="regular slider">
+                <div>
+                    <img class="centered box-shadow" src="images/ui.png">
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="caption-container">
+        <p>Draw With Turtle</p>
+    </div>
+    <div class="row margin-top">
+      <div class="large-10 large-centered columns">
+        <div class="regular slider">
+          <div>
+            <div class="browser box-shadow"><img src="images/draw_star.png"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="caption-container">
+        <p>Draw Flower With Turtle</p>
+    </div>
+    <div class="row margin-top">
+      <div class="large-10 large-centered columns">
+        <div class="regular slider">
+          <div>
+            <div class="browser box-shadow"><img src="images/ini_project.png"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="caption-container">
+        <p>Done By: Makhloufi Smail</p>
+    </div>
+  <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-47455033-1', 'markpeck.me');
+	  ga('send', 'pageview');
+
+	</script>
+
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      $('.regular').slick({
+        dots: true,
+        infinite: true,
+        arrows: false,
+      });
+    });
+
+    var audio = $('#nbajam-sound')[0];
+      $('#nbajam').click(function() {
+        audio.play();
+    });
+
+     $.jribbble.setToken('e6fa8ab846efa3602f61f6ad55ddfd7b8141f14da50d70499eaf8a879e957157');
+
+     $.jribbble.users('doodlemarks').shots('debuts', {
+       'per_page': 12,
+       'timeframe': 'month',
+       'sort': 'views'
+     }).then(function(res) {
+       var html = [];
+       res.forEach(function(shot) {
+         html.push('<div class="shot column column-block">');
+         html.push('<a href="' + shot.html_url + '" target="_blank">');
+         html.push('<img src="' + shot.images.normal + '">');
+         html.push('</a></div>');
+       });
+
+     $('.dribbble').html(html.join(''));
+     });
+  </script>
+  </body>
+</html>

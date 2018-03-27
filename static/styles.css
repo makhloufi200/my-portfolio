@@ -1,0 +1,403 @@
+/*
+Styles written by Mark Peck
+hire me: peck.mark@gmail.com
+
+$green: #1c2e9e;
+$blue: #F3004C;
+$black: #000220;
+$gray: #4D5162;
+*/
+
+@import url("grid.css");
+
+html {
+  font-size: 22px;
+}
+
+body {
+  background: #fff;
+  color: #000220;
+  font-family: 'Bolton Light', sans-serif;
+  font-weight: 200;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bolton Bold', sans-serif;
+  font-weight: 700;
+}
+
+a:link, a:focus, a:visited {
+  color: #F3004C;
+  /*border-bottom: 1px dashed #F3004C;*/
+  border: 0;
+  background: url(../images/text-underline.svg) repeat-x bottom;
+  background-size: 10px 2px;
+  padding-bottom: 0.182em;
+  -webkit-transition: 0.2s opacity ease;
+  transition: 0.2s opacity ease;
+}
+
+a:link:hover {
+  opacity: .8;
+}
+
+.green {
+  color: #1c2e9e;
+}
+
+.blue {
+  color: #F3004C;
+}
+
+.grey {
+  color: #4D5162;
+}
+
+.light-grey {
+  color: #7f808f;
+}
+
+.extra-light-grey {
+  color: #BABDC9
+}
+
+.white {
+  color: #fff;
+}
+
+::selection {
+  color: #767B93;
+  background: #4D5162;
+}
+
+.light {
+  font-family: 'Bolton Light', sans-serif;
+  font-weight: 200;
+}
+
+.font-small {
+  font-size: 0.818em;
+}
+
+.font-extra-small {
+  font-size: 0.727em;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.8;
+}
+
+.margin-vertical { margin-top: 3.636em; margin-bottom: 3.636em; }
+.margin-vertical-large { margin-top: 5.455em; margin-bottom: 5.455em; }
+.margin-top { margin-top: 3.636em; }
+.margin-top-large { margin-top: 5.455em; }
+.margin-top-small { margin-top: 0.909em; }
+.margin-bottom { margin-bottom: 1.818em; }
+.margin-bottom-small { margin-bottom: 0.909em; }
+.margin-none { margin: 0; }
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+img.centered {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+.row {
+  max-width: 700px;
+}
+
+.background-blue-gradient {
+  background: #0e1865;
+  background: -moz-linear-gradient(-45deg, #0e1865 0%, #000440 100%);
+  background: -webkit-linear-gradient(-45deg, #0e1865 0%,#000440 100%);
+  background: linear-gradient(135deg, #0e1865 0%,#000440 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e1865', endColorstr='#000440',GradientType=1 );
+}
+
+.box-shadow {
+  box-shadow: 0 8px 25px rgba(115,119,140,.15);
+}
+
+.border-bottom-grey {
+  border-bottom: 1px solid #7f808f;
+}
+
+.opener-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.opener-bg img {
+  position: absolute;
+  right: -50%;
+  top: -50%;
+  width: 120%;
+  height: auto;
+  perspective: 1000px;
+}
+
+.opener-box {
+  position: relative;
+  top: 60px;
+  background: #fff url(../images/prof.jpg) no-repeat right bottom;
+  background-size: 1000px auto;
+  box-shadow: 0 20px 80px rgba(115,119,140,.25);
+  padding: 0 120px;
+  border-radius: 30px 0 30px 0;
+}
+
+.opener-box * {
+  position: relative;
+  z-index: 2;
+}
+
+.overlay-white {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 30px 0 30px 0;
+}
+
+.social-links {
+  list-style: none;
+  margin-left: 0;
+}
+
+.social-links li {
+  float: left;
+  margin-right: 20px;
+}
+
+.social-links a:link, .social-links a:visited {
+  color: #000220;
+  border: none;
+  font-size: 42px;
+  background: none;
+  margin: 0;
+}
+
+.opener-space-adjust {
+  margin-top: 60px;
+}
+
+.border-left {
+  border-left: 4px solid #1c2e9e;
+  padding-left: 2.727em;
+}
+
+.shot a:link:hover {
+  opacity: 1;
+}
+
+.shot img {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  top: 0;
+  box-shadow: 0 5px 20px rgba(0, 4, 64, 0.75);
+}
+
+.shot a img:hover {
+  top: -10px;
+  box-shadow: 0 20px 25px 4px rgba(0, 4, 64, 1);
+}
+
+.shot img {
+}
+
+.square-center {
+  position: relative;
+  z-index: 1;
+}
+
+.square-center:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  width: 100px;
+  height: 100px;
+  transform: translateY(-50%);
+  margin: 0 0 0 -50px;
+  background: rgba(243, 0, 76, .25);
+  border: 3px solid #F3004C;
+  border-left-style: dashed;
+  border-bottom-style: dashed;
+}
+
+.slider {
+  overflow: visible;
+  align:center;
+}
+
+.slick-slide:focus {
+  outline: 0;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: rgba(255,255,255,0.25);
+  line-height: 0;
+  padding: 6px;
+  font-size: 6px;
+  border-radius: 2px;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin-right: 4px;
+  padding: 0;
+}
+
+.slick-dots li:last-child {
+  margin-right: 0;
+}
+
+.slick-dots li button {
+  display: block;
+  width: 15px;
+  height: 6px;
+  margin: 0;
+  padding: 0;
+  border-radius: 2px;
+  background: #7f808f;
+  text-indent: 1000px;
+  line-height: 1;
+  overflow: hidden;
+  opacity: .25;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #1c2e9e;
+  opacity: 1;
+}
+
+.slick-dots li button:focus {
+  outline: 0;
+}
+
+.browser {
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  margin: 0 auto 20px auto;
+  padding-top: 30px;
+  background-color: #BABDC9;
+  border-radius: 3px;
+}
+
+.browser:before {
+  content: "...";
+  color: #4D5162;
+  font-size: 46px;
+  text-indent: 10px;
+  line-height: 0;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+}
+
+.browser img {
+  border-radius: 0 0 3px 3px;
+}
+
+/* Medium only */
+@media screen and (max-width: 63.9375em) {
+  html {
+    font-size: 18px;
+  }
+  .opener-box {
+    top: 40px;
+    background-size: contain;
+    padding: 0 60px;
+  }
+  .opener-space-adjust {
+    top: 40px;
+  }
+  .overlay-white {
+    opacity: .25;
+    visibility: visible;
+  }
+  .border-left {
+    margin-left: 20px;
+  }
+}
+
+
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .margin-vertical { margin-top: 2.222em; margin-bottom: 2.222em; }
+  .margin-vertical-large { margin-top: 4.444em; margin-bottom: 4.444em; }
+  .margin-top { margin-top: 2.222em; }
+  .margin-top-large { margin-top: 4.444em; }
+  .margin-top-small { margin-top: 1.111em; }
+  .margin-bottom { margin-bottom: 2.222em; }
+  .margin-bottom-small { margin-bottom: 1.111em; }
+  .small-margin-bottom-none { margin-bottom: 0; }
+  .opener-box {
+    top: 0;
+    padding: 0 20px;
+    margin: 20px 0;
+    background-size: cover;
+    background-position: center;
+  }
+  .opener-space-adjust {
+    margin-top: 0px;
+  }
+  .overlay-white {
+    opacity: .75;
+  }
+  .border-left {
+    padding-left: 20px;
+  }
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+img {
+  vertical-align: center;
+  width: 1000px;
+  img-align:center;
+
+}
