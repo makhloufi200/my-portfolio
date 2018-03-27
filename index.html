@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+
+<h1 style="text-align:center">My Portfolio</h1>
+<h2>About me</h2>
+<div class="row" id="info">
+    <div class="column" width="80%">
+        <p>I am Makhloufi Smail<br/> <br/>These are some of the applications that I have accomplished,<br/> through the initiative of one million Arab programmers.<br>This site has been programmed using the sister site Nabila</p>
+    </div>
+</div>
+<div class="caption-container">
+    <p>My Business List </p>
+  </div><br><br>
+<div class="row">
+      <div class="column">
+          <img class="demo cursor" src="images/forum.png" style="width:100%; height: 150px" onclick="currentSlide(1)" alt="Application to the Global Web Development Workshop">
+      </div>
+      <div class="column">
+          <img class="demo cursor" src="images/web-dev.png" style="width:100%; height: 150px" onclick="currentSlide(2)" alt="Website of the Global Web Development Workshop">
+      </div>
+      <div class="column">
+          <img class="demo cursor" src="images/draw_star.png" style="width:100%; height: 150px" onclick="currentSlide(3)" alt="Draw With Turtle">
+      </div>
+      <div class="column">
+          <img class="demo cursor" src="images/ui.png" style="width:100%; height: 150px" onclick="currentSlide(4)" alt="Example of dealing with graphical interfaces">
+      </div>
+
+  </div>
+  <br><br>
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+<div class="container">
+    <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="images/forum.png" style="width:100%; height:400px">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="images/web-dev.png" style="width:100%; height:400px">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="images/draw_star.png" style="width:100%; height:400px">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="images/ui.png" style="width:100%; height:400px">
+    </div>
+
+
+
+
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</body>
+</html>
